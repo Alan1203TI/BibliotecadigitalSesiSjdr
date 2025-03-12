@@ -1,0 +1,113 @@
+body {
+    font-family: Coolvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('background.jpg');  /* Adiciona a imagem de fundo */
+    background-size: cover;  /* Faz a imagem cobrir todo o cabeçalho */
+    background-position: center;  /* Centraliza a imagem */
+    position: relative;  /* Define a posição como relativa para posicionar o campo de pesquisa */
+}
+
+#search {
+    border-radius: 15px;  /* Define o raio da borda para arredondar */
+    padding: 10px;  /* Adiciona preenchimento interno */
+    border: 1px solid #ccc;  /* Define a borda */
+    font-size: 16px;  /* Define o tamanho da fonte */
+    position: absolute;  /* Define a posição como absoluta */
+    top: 270px;  /* Posiciona 10 pixels a partir do topo do cabeçalho */
+    left: 20px;  /* Posiciona 20 pixels a partir do canto direito do cabeçalho */
+}
+
+header .logo {
+    width: 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+header .logo,
+footer .logo {
+    width: 100px;  /* Define a largura da logo */
+    height: auto;  /* Define a altura automática para manter a proporção */
+    margin-bottom: 10px;  /* Espaçamento abaixo da logo */
+    border-radius: 50%;  /* Define bordas arredondadas, criando um círculo */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+footer {
+    background-color: #0518f0;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.book {
+    margin: 20px;
+    text-align: center;
+}
+.book img {
+    width: 300px;
+    height: 400px;
+}
+.location {
+    font-size: 14px;
+    color: #555;
+}
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.author {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+.edition {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+#search {
+    border-radius: 15px;  /* Define o raio da borda para arredondar */
+    padding: 10px;  /* Adiciona preenchimento interno */
+    border: 1px solid #ccc;  /* Define a borda */
+    font-size: 16px;  /* Define o tamanho da fonte */
+}
+nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+select {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 170px;  
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
