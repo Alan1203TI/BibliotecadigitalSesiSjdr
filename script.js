@@ -1,10 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    if (!livros || !Array.isArray(livros)) {
+        console.error("A variável 'livros' não está definida ou não é um array.");
+        return;
+    }
+
     const main = document.querySelector('main');
+    if (!main) {
+        console.error("O elemento 'main' não foi encontrado.");
+        return;
+    }
+
     main.innerHTML = '';  // Limpa o conteúdo atual
 
     // Adicionar opções ao menu de título e autor
     const menuTitulo = document.getElementById('menu-titulo');
     const menuAutor = document.getElementById('menu-autor');
+    if (!menuTitulo || !menuAutor) {
+        console.error("Os elementos 'menu-titulo' ou 'menu-autor' não foram encontrados.");
+        return;
+    }
 
     const titulos = [...new Set(livros.map(livro => livro.titulo))];
     const autores = [...new Set(livros.map(livro => livro.autor))];
@@ -30,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         div.innerHTML = `
             <div class="title">${livro.titulo}</div>
             <div class="author">${livro.autor}</div>
-            <div class="edition">${livro.edicao}</div>
             <img src="${livro.capa}" alt="Capa do Livro">
             <div class="location">Prateleira: ${livro.prateleira}</div>
         `;
@@ -55,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             div.innerHTML = `
                 <div class="title">${livro.titulo}</div>
                 <div class="author">${livro.autor}</div>
-                <div class="edition">${livro.edicao}</div>
                 <img src="${livro.capa}" alt="Capa do Livro">
                 <div class="location">Prateleira: ${livro.prateleira}</div>
             `;
