@@ -29,18 +29,27 @@ header {
 @media (max-width: 1000px) {
     header {
         background-size: contain; /* Ajusta a imagem para conter dentro do cabeçalho em telas menores */
+        padding: 60px 0; /* Reduz o padding em telas menores */
     }
 }
 
 /* Estilo do campo de busca */
 #search {
-    border-radius: 15px;
+    border-radius: 16px;
     padding: 13px;
     border: 1px solid #ccc;
     font-size: 16px;
     position: absolute;
-    top: 0px;
-    left: 1650px;
+    top: 10px;
+    left: 42%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    width: 80%; /* Ajusta a largura em telas menores */
+}
+
+@media (max-width: 600px) {
+    #search {
+        top: 80px; /* Ajusta a posição superior em telas menores */
+    }
 }
 
 /* Estilo da logo */
@@ -77,8 +86,9 @@ footer {
     text-align: center;
 }
 .book img {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 .location,
 .title,
