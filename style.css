@@ -36,19 +36,20 @@ header {
 /* Estilo do campo de busca */
 #search {
     border-radius: 16px;
-    padding: 13px;
-    border: 1px solid #ccc;
+    padding: 8px; /* Reduz o espaço de digitação pela metade */
+    border: 1px solid #b9b7cf;
     font-size: 16px;
     position: absolute;
-    top: 10px;
-    left: 42%;
+    top:-50px; /* Ajusta a posição para ficar acima dos menus */
+    left: 160px;
     transform: translateX(-50%); /* Centraliza horizontalmente */
-    width: 80%; /* Ajusta a largura em telas menores */
+    width: 40%; /* Ajusta a largura em telas menores */
 }
 
 @media (max-width: 600px) {
     #search {
-        top: 80px; /* Ajusta a posição superior em telas menores */
+        top: 90px; /* Ajusta a posição superior em telas menores */
+        width: 80%; /* Ajusta a largura em telas menores */
     }
 }
 
@@ -71,7 +72,7 @@ main {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #4251f5;
+    background-color: #ccc;
     color: #fff;
     text-align: center;
     padding: 10px 0;
