@@ -64,6 +64,14 @@ header {
     }
 }
 
+/* Estilo do informativo */
+#informativo {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 /* Estilo da logo */
 header .logo,
 footer .logo {
@@ -97,11 +105,13 @@ footer {
 .book {
     margin: 20px;
     text-align: center;
+    flex: 0 0 calc(33.333% - 40px); /* Adiciona flex para 3 capas por fileira */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
 }
 .book img {
     width: 100%;
-    max-width: 300px;
-    height: auto;
+    height: 250px; /* Define uma altura fixa */
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento */
     border-radius: 15px; /* Adiciona bordas arredondadas às capas dos livros */
     cursor: pointer; /* Adiciona cursor de ponteiro ao passar o mouse sobre a capa */
 }
@@ -167,6 +177,10 @@ select {
     .container {
         flex-direction: column;
     }
+
+    .book {
+        flex: 0 0 100%; /* Adiciona flex para 1 capa por fileira em telas menores */
+    }
 }
 
 /* Estilo para o contêiner de resumo */
@@ -180,6 +194,6 @@ select {
     max-width: 600px;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1001;
 }
