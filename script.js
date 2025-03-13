@@ -44,10 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
         div.innerHTML = `
             <div class="title">${livro.titulo}</div>
             <div class="author">${livro.autor}</div>
-            <img src="${livro.capa}" alt="Capa do Livro">
+            <img src="${livro.capa}" alt="Capa do Livro" class="book-cover">
             <div class="location">Prateleira: ${livro.prateleira}</div>
+            <div class="resumo" style="display: none;">${livro.resumo}</div>
         `;
         main.appendChild(div);
+
+        // Adiciona evento de clique à capa do livro para exibir apenas o livro selecionado e o resumo
+        div.querySelector('.book-cover').addEventListener('click', () => {
+            main.innerHTML = '';  // Limpa todos os livros
+            const selectedBook = document.createElement('div');
+            selectedBook.className = 'book';
+            selectedBook.innerHTML = `
+                <div class="title">${livro.titulo}</div>
+                <div class="author">${livro.autor}</div>
+                <img src="${livro.capa}" alt="Capa do Livro" class="book-cover">
+                <div class="location">Prateleira: ${livro.prateleira}</div>
+                <div class="resumo">${livro.resumo}</div>
+                <button id="voltar">Voltar à lista de livros</button>
+            `;
+            main.appendChild(selectedBook);
+
+            // Adiciona evento de clique ao botão "Voltar à lista de livros"
+            document.getElementById('voltar').addEventListener('click', () => {
+                exibirLivros(livros);
+            });
+        });
     });
 
     // Função para buscar livros
@@ -68,10 +90,32 @@ document.addEventListener('DOMContentLoaded', () => {
             div.innerHTML = `
                 <div class="title">${livro.titulo}</div>
                 <div class="author">${livro.autor}</div>
-                <img src="${livro.capa}" alt="Capa do Livro">
+                <img src="${livro.capa}" alt="Capa do Livro" class="book-cover">
                 <div class="location">Prateleira: ${livro.prateleira}</div>
+                <div class="resumo" style="display: none;">${livro.resumo}</div>
             `;
             main.appendChild(div);
+
+            // Adiciona evento de clique à capa do livro para exibir apenas o livro selecionado e o resumo
+            div.querySelector('.book-cover').addEventListener('click', () => {
+                main.innerHTML = '';  // Limpa todos os livros
+                const selectedBook = document.createElement('div');
+                selectedBook.className = 'book';
+                selectedBook.innerHTML = `
+                    <div class="title">${livro.titulo}</div>
+                    <div class="author">${livro.autor}</div>
+                    <img src="${livro.capa}" alt="Capa do Livro" class="book-cover">
+                    <div class="location">Prateleira: ${livro.prateleira}</div>
+                    <div class="resumo">${livro.resumo}</div>
+                    <button id="voltar">Voltar à lista de livros</button>
+                `;
+                main.appendChild(selectedBook);
+
+                // Adiciona evento de clique ao botão "Voltar à lista de livros"
+                document.getElementById('voltar').addEventListener('click', () => {
+                    exibirLivros(livros);
+                });
+            });
         });
     }
 

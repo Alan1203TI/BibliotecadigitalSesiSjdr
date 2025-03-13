@@ -3,7 +3,8 @@ const livros = [
         titulo: "Cachinhos de Ouro",
         autor: "Recontado por Ana Maria Machado",
         capa: "cachinhosdeouro.jpg",
-        prateleira: "A3"
+        prateleira: "A3",
+        resumo: "<br><b>SINOPSE<b>:<br>Cachinhos de Ouro, passeando pela floresta, encontrou uma casa. <br>Lá morava uma família de ursos e tudo tinha três tamanhos:<br> pequeno, médio e grande - as cadeiras, os pratos, as camas.<br>Naquele dia, Mamãe Urso tinha feito um delicioso mingau. <br>Enquanto ele esfriava, foi dar uma volta com Papai Urso e o Neném Ursinho. <br>A menina encontrou a porta da casa aberta, entrou e...<br>"
     },
     {
         titulo: "Ideias que rimam mais que palavras",

@@ -3,10 +3,7 @@ body {
     font-family: Coolvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('path/to/your/image.jpg'); /* Caminho para a sua imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-color: #f0f8ff; /* Cor de fundo desejada */
     padding-top: 220px; /* Espaçamento suficiente para o cabeçalho */
 }
 
@@ -18,7 +15,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('background.jpg'); /* Adiciona a imagem de fundo */
+    background-image: url('background.jpg'); /* Adiciona a imagem de fundo ao cabeçalho */
     background-size: cover; /* Faz a imagem cobrir todo o cabeçalho */
     background-position: top center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
@@ -43,7 +40,7 @@ header {
     border: 1px solid #b9b7cf;
     font-size: 16px;
     position: absolute;
-    top:-50px; /* Ajusta a posição para ficar acima dos menus */
+    top: -50px; /* Ajusta a posição para ficar acima dos menus */
     left: 160px;
     transform: translateX(-50%); /* Centraliza horizontalmente */
     width: 40%; /* Ajusta a largura em telas menores */
@@ -75,7 +72,7 @@ main {
 
 /* Estilo do rodapé */
 footer {
-    background-color: #ccc;
+    background-color: #301ef5;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -94,18 +91,19 @@ footer {
     max-width: 300px;
     height: auto;
     border-radius: 15px; /* Adiciona bordas arredondadas às capas dos livros */
+    cursor: pointer; /* Adiciona cursor de ponteiro ao passar o mouse sobre a capa */
 }
 .location,
 .title,
 .author,
 .edition {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
 }
 .title {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /* Estilo da navegação */
@@ -137,4 +135,19 @@ select {
     .col {
         width: 100%;
     }
+}
+
+/* Estilo para o contêiner de resumo */
+#resumo-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
 }
