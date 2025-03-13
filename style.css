@@ -3,7 +3,10 @@ body {
     font-family: Coolvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('path/to/your/image.jpg'); /* Caminho para a sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
     padding-top: 220px; /* Espaçamento suficiente para o cabeçalho */
 }
 
@@ -90,6 +93,7 @@ footer {
     width: 100%;
     max-width: 300px;
     height: auto;
+    border-radius: 15px; /* Adiciona bordas arredondadas às capas dos livros */
 }
 .location,
 .title,
