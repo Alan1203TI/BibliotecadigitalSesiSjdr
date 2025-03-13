@@ -29,7 +29,7 @@ header {
 @media (max-width: 1000px) {
     header {
         background-size: contain; /* Ajusta a imagem para conter dentro do cabeçalho em telas menores */
-        padding: 30px 0; /* Reduz o padding em telas menores */
+        padding: 10px 0; /* Reduz o padding em telas menores */
     }
 }
 
