@@ -39,16 +39,13 @@ header {
     padding: 8px; /* Reduz o espaço de digitação pela metade */
     border: 1px solid #b9b7cf;
     font-size: 16px;
-    position: absolute;
-    top: -50px; /* Ajusta a posição para ficar acima dos menus */
-    left: 160px;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
     width: 40%; /* Ajusta a largura em telas menores */
+    max-width: 400px; /* Define a largura máxima */
+    margin: 5px 0; /* Espaçamento vertical */
 }
 
 @media (max-width: 600px) {
     #search {
-        top: 90px; /* Ajusta a posição superior em telas menores */
         width: 80%; /* Ajusta a largura em telas menores */
     }
 }
@@ -108,12 +105,9 @@ footer {
 
 /* Estilo da navegação */
 nav {
-    position: absolute;
-    top: 170px;
-    left: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px; /* Ajusta o espaçamento entre os elementos */
     margin-bottom: 10px;
 }
@@ -122,18 +116,23 @@ select {
     border-radius: 15px;
     border: 1px solid #ccc;
     font-size: 16px;
+    width: 100%; /* Ajusta a largura em telas menores */
+    max-width: 400px; /* Define a largura máxima */
 }
 
 /* Estilos responsivos */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
+    body {
+        padding-top: 180px; /* Ajusta o espaçamento do cabeçalho em telas menores */
+    }
+
+    nav {
+        top: auto;
+        left: auto;
+    }
+
     .container {
         flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .col {
-        width: 100%;
     }
 }
 
