@@ -63,7 +63,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    margin-top: 20px; /* Adiciona margem superior para evitar sobreposição com o cabeçalho */
+    margin-top: 60px; /* Reduz a margem superior para aproximar do cabeçalho */
 }
 
 /* Estilo do rodapé */
@@ -112,7 +112,7 @@ nav {
     gap: 10px; /* Ajusta o espaçamento entre os elementos */
     margin-bottom: 10px;
     position: relative;
-    right: 20px; /* Alinha os menus à direita */
+    right: 00px; /* Alinha os menus à direita */
 }
 
 @media (max-width: 600px) {
@@ -160,14 +160,27 @@ select {
 /* Estilo para o contêiner de resumo */
 #resumo-container {
     display: none; /* Inicialmente oculto */
+    flex-direction: row; /* Define a direção da linha para imagem e sinopse */
+    align-items: flex-start; /* Alinha o conteúdo ao início */
+    justify-content: space-between; /* Distribui o espaço entre a capa e a sinopse */
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
+    top: 20px; /* Ajusta a posição superior */
+    right: 10px; /* Posiciona o contêiner de resumo no canto direito da tela */
+    width: 60%; /* Define a largura do contêiner de resumo */
+    height: auto; /* Define a altura automaticamente */
     padding: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1001;
+}
+
+#resumo-container img {
+    width: 30%; /* Define a largura da capa como 30% */
+    height: auto; /* Ajusta a altura automaticamente */
+    object-fit: contain; /* Ajusta a imagem para caber no elemento */
+    margin-right: 20px; /* Adiciona espaçamento à direita da capa */
+}
+
+#resumo-container .sinopse {
+    width: 70%; /* Define a largura da sinopse como 70% */
 }
