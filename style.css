@@ -29,7 +29,7 @@ header {
 @media (max-width: 1000px) {
     header {
         background-size: contain; /* Ajusta a imagem para conter dentro do cabeçalho em telas menores */
-        padding: 60px 0; /* Reduz o padding em telas menores */
+        padding: 30px 0; /* Reduz o padding em telas menores */
     }
 }
 
@@ -39,6 +39,10 @@ header {
     padding: 8px; /* Reduz o espaço de digitação pela metade */
     border: 1px solid #b9b7cf;
     font-size: 16px;
+    position: absolute;
+    top: -50px; /* Ajusta a posição para ficar acima dos menus */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
     width: 40%; /* Ajusta a largura em telas menores */
     max-width: 400px; /* Define a largura máxima */
     margin: 5px 0; /* Espaçamento vertical */
@@ -46,6 +50,7 @@ header {
 
 @media (max-width: 600px) {
     #search {
+        top: 90px; /* Ajusta a posição superior em telas menores */
         width: 80%; /* Ajusta a largura em telas menores */
     }
 }
@@ -105,12 +110,34 @@ footer {
 
 /* Estilo da navegação */
 nav {
+    position: absolute;
+    top: 150px; /* Ajusta a posição superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px; /* Ajusta o espaçamento entre os elementos */
     margin-bottom: 10px;
 }
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        top: auto;
+        left: auto;
+        position: static;
+        transform: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #search {
+        top: 90px; /* Ajusta a posição superior em telas menores */
+        width: 80%; /* Ajusta a largura em telas menores */
+    }
+}
+
 select {
     padding: 10px;
     border-radius: 15px;
