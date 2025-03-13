@@ -15,15 +15,16 @@ body {
 
 /* Estilo do cabeçalho */
 header {
-    background-color: #333;
+    background-color: #ffffff;
     color: #fff;
-    padding: 110px 0;
+    padding: 20px 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Altera para exibir elementos em linha */
     align-items: center;
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
     background-image: url('background.jpg'); /* Adiciona a imagem de fundo ao cabeçalho */
     background-size: cover; /* Faz a imagem cobrir todo o cabeçalho */
-    background-position: top center; /* Centraliza a imagem */
+    background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     position: fixed;
     top: 0;
@@ -36,31 +37,6 @@ header {
     header {
         background-size: contain; /* Ajusta a imagem para conter dentro do cabeçalho em telas menores */
         padding: 10px 0; /* Reduz o padding em telas menores */
-    }
-}
-
-/* Estilo do campo de busca */
-#search {
-    border-radius: 16px;
-    padding: 8px; /* Reduz o espaço de digitação pela metade */
-    border: 1px solid #b9b7cf;
-    font-size: 16px;
-    position: absolute;
-    top: -50px; /* Ajusta a posição para ficar acima dos menus */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    width: 40%; /* Ajusta a largura em telas menores */
-    max-width: 400px; /* Define a largura máxima */
-    margin: 5px 0; /* Espaçamento vertical */
-}
-
-@media (max-width: 600px) {
-    #search {
-        top: 90px; /* Ajusta a posição superior em telas menores */
-        width: 80%; /* Ajusta a largura em telas menores */
-        position: static; /* Ajusta a posição */
-        transform: none; /* Remove a transformação */
-        margin-top: 10px; /* Adiciona margem superior */
     }
 }
 
@@ -110,7 +86,7 @@ footer {
 }
 .book img {
     width: 100%;
-    height: 250px; /* Define uma altura fixa */
+    height: 700px; /* Define uma altura fixa */
     object-fit: cover; /* Ajusta a imagem para cobrir o elemento */
     border-radius: 15px; /* Adiciona bordas arredondadas às capas dos livros */
     cursor: pointer; /* Adiciona cursor de ponteiro ao passar o mouse sobre a capa */
@@ -130,15 +106,13 @@ footer {
 
 /* Estilo da navegação */
 nav {
-    position: absolute;
-    top: 150px; /* Ajusta a posição superior */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px; /* Ajusta o espaçamento entre os elementos */
     margin-bottom: 10px;
+    position: relative;
+    right: 20px; /* Alinha os menus à direita */
 }
 
 @media (max-width: 600px) {
@@ -159,7 +133,7 @@ select {
     border-radius: 15px;
     border: 1px solid #ccc;
     font-size: 16px;
-    width: 100%; /* Ajusta a largura em telas menores */
+    width: 200px; /* Ajusta a largura em telas menores */
     max-width: 400px; /* Define a largura máxima */
 }
 
