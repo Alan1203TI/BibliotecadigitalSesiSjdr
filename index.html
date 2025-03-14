@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="livros.js"></script> <!-- Certifique-se de que livros.js define a variável livros -->
-    <script src="script.js" defer></script> <!-- Certifique-se de que script.js é carregado após o DOM -->
-    <title>Biblioteca</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonte Google: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="livros.js"></script> <!-- Certifique-se de que livros.js define a variável livros -->
+  <script src="script.js" defer></script> <!-- script.js será carregado após o DOM -->
+  <title>Biblioteca Digital</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="menu-container">
-                <select id="menu-titulo">
-                    <option value="">Selecione por Título</option>
-                    <!-- Opções de título serão adicionadas pelo JavaScript -->
-                </select>
-                <select id="menu-autor">
-                    <option value="">Selecione por Autor</option>
-                    <!-- Opções de autor serão adicionadas pelo JavaScript -->
-                </select>
-                <p id="informativo">Clique na capa do livro para visualizar a sinopse.</p>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <!-- Livros serão adicionados aqui pelo JavaScript -->
-    </main>
-    <footer>
-        <img src="logo.png" alt="Logo da Biblioteca" class="logo">
-        <p>&copy; 2025 Biblioteca Sesi Dom Bosco - São João del-Rei. Todos os direitos reservados.</p>
-    </footer>
-    <div id="resumo-container" style="display: none;">
-        <img id="resumo-capa" src="" alt="Capa do Livro" class="book-cover">
-        <div id="resumo-sinopse" class="sinopse"></div>
-        <button id="voltar-resumo">Voltar à lista de livros</button>
-    </div>
+  <header>
+    <nav>
+      <div class="menu-container">
+         <select id="menu-titulo">
+             <option value="">Selecione por Título</option>
+         </select>
+         <select id="menu-autor">
+             <option value="">Selecione por Autor</option>
+         </select>
+         <p id="informativo">Clique na capa do livro para visualizar a sinopse.</p>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Os cartões dos livros serão renderizados aqui pelo JavaScript -->
+  </main>
+  <footer>
+    <img src="logo.png" alt="Logo da Biblioteca" class="logo">
+    <p>&copy; 2025 Biblioteca Sesi Dom Bosco - São João del-Rei. Todos os direitos reservados.</p>
+  </footer>
+  <div id="resumo-container">
+    <img id="resumo-capa" src="" alt="Capa do Livro" class="book-cover">
+    <div id="resumo-sinopse" class="sinopse"></div>
+    <button id="voltar-resumo">Voltar à lista de livros</button>
+  </div>
 </body>
 </html>
