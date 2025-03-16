@@ -1,11 +1,11 @@
-/* Variáveis de cores e estilo modernos */
+/* Variáveis de cores e estilo */
 :root {
-    --primary-color: #007acc;       /* Azul vibrante */
-    --secondary-color: #FF4081;       /* Rosa moderno */
-    --background-color: #14c0f9;      /* Fundo suave */
-    --text-color: #333333;           /* Texto escuro */
-    --card-background: #ffffff;      /* Fundo dos cartões */
-    --border-color: #e0e0e0;          /* Borda suave */
+    --primary-color: #007acc;
+    --secondary-color: #FF4081;
+    --background-color: #14c0f9;
+    --text-color: #333333;
+    --card-background: #ffffff;
+    --border-color: #e0e0e0;
 }
 
 /* Estilo do corpo */
@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-    padding-top: 220px; /* Espaço para o cabeçalho fixo */
+    padding-top: 220px;
 }
 
 @media (max-width: 600px) {
@@ -26,9 +26,9 @@ body {
 /* Estilo do cabeçalho */
 header {
     background-image: url('background.jpg');
-    background-size: cover;       /* Faz a imagem cobrir toda a área do cabeçalho */
-    background-position: center;  /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 20px 0;
     display: flex;
     flex-direction: row;
@@ -41,106 +41,29 @@ header {
     z-index: 1000;
 }
 
-/* Informativo */
-#informativo {
-    color: var(--text-color);
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
+@media (max-width: 600px) {
+    header {
+        background-size: contain;
+        background-position: center top;
+        height: auto;
+        padding: 10px 0;
+    }
 }
 
-/* Logo (cabeçalho e rodapé) */
-header .logo,
-footer .logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 50%;
-}
-
-/* Conteúdo principal */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    margin-top: 60px;
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Cartões dos livros */
-.book {
-    margin: 20px;
-    text-align: center;
-    flex: 0 0 calc(33.333% - 40px);  /* Três por linha */
-    box-sizing: border-box;
-    background-color: var(--card-background);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.book:hover {
-    transform: translateY(-5px);
-}
-
-.book img {
-    width: 100%;
-    height: 500px; /* Proporção mais equilibrada */
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.book img:hover {
-    transform: scale(1.02);
-}
-
-/* Tipografia dos títulos, autores e detalhes */
-.location,
-.title,
-.author,
-.edition {
-    font-size: 16px;
-    color: var(--text-color);
-}
-
-.title {
-    font-weight: 600;
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
-/* Estilo da navegação */
-nav {
+/* Menu */
+.menu-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
-    position: relative;
-    right: 0;
 }
 
 @media (max-width: 600px) {
-    nav {
+    .menu-container {
         flex-direction: column;
-        position: static;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 10px;
+        align-items: center;
+        width: 100%;
     }
 }
 
@@ -155,11 +78,92 @@ select {
     color: var(--text-color);
 }
 
-/* Responsividade para os livros em telas pequenas */
+@media (max-width: 600px) {
+    select {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+#informativo {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #informativo {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Cartões dos livros */
+.book {
+    margin: 20px;
+    text-align: center;
+    flex: 0 0 calc(33.333% - 40px);
+    box-sizing: border-box;
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.book img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.book img:hover {
+    transform: scale(1.02);
+}
+
 @media (max-width: 600px) {
     .book {
         flex: 0 0 100%;
     }
+
+    .book img {
+        height: auto;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 /* Contêiner de resumo do livro */
@@ -194,7 +198,7 @@ select {
     line-height: 1.6;
 }
 
-/* Botões modernos */
+/* Botões */
 button {
     padding: 10px 20px;
     border: none;
@@ -207,5 +211,5 @@ button {
 }
 
 button:hover {
-    background-color: #e0416f; /* uma versão um pouco mais escura do secundário */
+    background-color: #e0416f;
 }
